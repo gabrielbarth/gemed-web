@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import { lighten } from 'polished';
+import { lighten, darken } from 'polished';
 
 import colors from '~/styles/colors';
 
@@ -51,6 +51,11 @@ export const Container = styled.div`
       color: #fff;
       font-size: 20px;
       font-weight: bold;
+      transition: background 0.3s;
+
+      &:hover {
+        background: ${darken(0.1, colors.primary)};
+      }
     }
   }
 `;

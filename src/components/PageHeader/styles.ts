@@ -1,4 +1,6 @@
 import styled from 'styled-components';
+import { lighten } from 'polished';
+
 import colors from '~/styles/colors';
 
 export const Container = styled.header`
@@ -7,7 +9,7 @@ export const Container = styled.header`
   display: flex;
   font-family: 'Barlow', sans-serif;
   border-radius: 0 0 8px 8px;
-  
+
 
   > div {
     margin: 0 auto;
@@ -42,6 +44,11 @@ export const LinkContainer = styled.div`
     display: flex;
     align-items: center;
     justify-content: center;
+    transition: background 0.3s;
+
+    &:hover {
+      background: ${lighten(0.05, colors.secondary)};
+    }
   }
 
   a {

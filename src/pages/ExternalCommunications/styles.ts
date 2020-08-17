@@ -1,10 +1,10 @@
 import styled from 'styled-components';
+import { lighten, darken } from 'polished';
 
 import colors from '~/styles/colors';
 
 export const Container = styled.div`
   max-width: 100vh;
-  /* min-height: 100vh; */
   margin: 0 auto;
 
   > div {
@@ -20,6 +20,13 @@ export const ButtonPagination = styled.button`
   border: 0;
   background: transparent;
   padding: 5px 20px;
+  transition: background 0.3s;
+  height: 45px;
+  border-radius: 8px;
+
+  &:hover {
+    background: ${darken(0.05, colors.background)};
+  }
 `;
 
 export const InputContainer = styled.div`
@@ -41,6 +48,11 @@ export const InputContainer = styled.div`
       border: 0;
       outline: 0;
       padding: 0 16px;
+      transition: background 0.3s;
+
+      &:hover {
+        background: ${lighten(0.05, colors.secondary)};
+      }
     }
   }
 `;
