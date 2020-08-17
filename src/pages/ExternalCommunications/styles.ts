@@ -4,6 +4,7 @@ import colors from '~/styles/colors';
 
 export const Container = styled.div`
   max-width: 100vh;
+  /* min-height: 100vh; */
   margin: 0 auto;
 
   > div {

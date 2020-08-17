@@ -2,9 +2,17 @@ import styled from 'styled-components';
 
 import colors from '~/styles/colors';
 
+// export const Teste = styled.div`
+//   display: flex;
+//   flex-direction: column;
+
+//   height: 100%;
+// `
+
 export const Container = styled.div`
   max-width: 100vh;
   margin: 0 auto;
+
 
   > div {
     display: flex;

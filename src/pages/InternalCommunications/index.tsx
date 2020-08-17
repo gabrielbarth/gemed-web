@@ -150,7 +150,7 @@ const InternalCommunications: React.FC = () => {
                 value={subject}
                 onChange={e => setSubject(e.target.value)}
               />
-              {/* <Input name="teste" label="Destino" /> */}
+              {/* <Input name="test" label="Destino" /> */}
               <button type="submit"> Criar </button>
             </form>
           </InputContainer>

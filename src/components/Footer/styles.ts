@@ -5,6 +5,9 @@ export const Container = styled.footer`
    font: 18px 'Barlow';
    color: ${colors.dark};
    text-align: center;
+   position: fixed;
+   width: 50%;
+   bottom: 20px;
 
   span {
     color: red;
@@ -15,7 +18,4 @@ export const Container = styled.footer`
     text-decoration: none;
   }
 
-  p {
-
-  }
 `;

@@ -7,6 +7,7 @@ export const Container = styled.header`
   display: flex;
   font-family: 'Barlow', sans-serif;
   border-radius: 0 0 8px 8px;
+  
 
   > div {
     margin: 0 auto;

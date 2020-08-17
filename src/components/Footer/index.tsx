@@ -6,14 +6,15 @@ import { Container } from './styles';
 const Footer: React.FC = () => {
   return (
     <Container>
-      <p>Feito com <span>❤</span> por {' '}
+      {/* <p>Feito com <span>❤</span> por {' '}
         <a
           href="https://gabrielbarth.com/en/"
           target="_blank"
         >
           Gabriel.
         </a>
-      </p>
+      </p> */}
+      <p>Se sair do Ar é culpa do Carlos Ávalo</p>
     </Container>
   );
 };
