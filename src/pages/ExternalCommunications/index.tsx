@@ -16,6 +16,7 @@ import {
   ButtonPagination,
   DialogLoginContainer
 } from './styles';
+import Footer from '~/components/Footer';
 
 const ExternalCommunications: React.FC = () => {
   const history = useHistory();
@@ -126,7 +127,8 @@ const ExternalCommunications: React.FC = () => {
             onCancel={handleCancelCreation}
             number={dialogNumber}
           />
-        : null}
+        : null
+      }
       <PageHeader
         title="Ofícios"
         navigateTo="/internal-communications"
@@ -134,44 +136,45 @@ const ExternalCommunications: React.FC = () => {
 
       {auth
       ? <>
-        <InputContainer>
-          <form onSubmit={handleCallCommunicationCreation}>
-            <Input
-              name="name"
-              label="Nome do autor"
-              value={author}
-              onChange={e => setAuthor(e.target.value)}
-            />
+          <InputContainer>
+            <form onSubmit={handleCallCommunicationCreation}>
+              <Input
+                name="name"
+                label="Nome do autor"
+                value={author}
+                onChange={e => setAuthor(e.target.value)}
+              />
 
-            <Input
-              name="subject"
-              label="Assunto"
-              value={subject}
-              onChange={e => setSubject(e.target.value)}
-            />
-            {/* <Input name="teste" label="Destino" /> */}
-            <button type="submit"> Criar </button>
-          </form>
-        </InputContainer>
+              <Input
+                name="subject"
+                label="Assunto"
+                value={subject}
+                onChange={e => setSubject(e.target.value)}
+              />
+              {/* <Input name="teste" label="Destino" /> */}
+              <button type="submit"> Criar </button>
+            </form>
+          </InputContainer>
 
-        {communications?.map((communication: Communication) => {
-          return (
-            <CommunicationItem
-              key={communication.ic_number}
-              communication={communication}
-            />
-          );
-        })}
+          {communications?.map((communication: Communication) => {
+            return (
+              <CommunicationItem
+                key={communication.ic_number}
+                communication={communication}
+              />
+            );
+          })
+          }
 
-        <div>
-          <ButtonPagination type="button" onClick={loadPreviousPage}>
-            Anterior
-          </ButtonPagination>
-          <ButtonPagination type="button" onClick={loadNextPage}>
-            Próximo
-          </ButtonPagination>
-        </div>
-      </>
+          <div>
+            <ButtonPagination type="button" onClick={loadPreviousPage}>
+              Anterior
+            </ButtonPagination>
+            <ButtonPagination type="button" onClick={loadNextPage}>
+              Próximo
+            </ButtonPagination>
+          </div>
+        </>
       : (
         <DialogLoginContainer>
           <div>
@@ -183,11 +186,9 @@ const ExternalCommunications: React.FC = () => {
               Realizar Login
             </button>
           </div>
-
         </DialogLoginContainer>
-      )
-      }
-
+      )}
+      <Footer />
     </Container>
   );
 }

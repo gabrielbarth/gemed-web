@@ -16,13 +16,11 @@ import {
   ButtonPagination,
   DialogLoginContainer
 } from './styles';
+import Footer from '~/components/Footer';
 
 const InternalCommunications: React.FC = () => {
   const history = useHistory();
   const { auth } = useContext(AuthContext);
-
-
-  const authToken = localStorage.getItem('@gemed/token');
 
   const [communications, setCommunications] = useState();
   const [author, setAuthor] = useState('');
@@ -129,50 +127,52 @@ const InternalCommunications: React.FC = () => {
             onCancel={handleCancelCreation}
             number={dialogNumber}
           />
-        : null}
+        : null
+      }
       <PageHeader
         title="Comunicações Internas (CI)"
         navigateTo="/external-communications"
       />
       {auth
       ? <>
-          <InputContainer>
-        <form onSubmit={handleCallCommunicationCreation}>
-          <Input
-            name="name"
-            label="Nome do autor"
-            value={author}
-            onChange={e => setAuthor(e.target.value)}
-          />
+            <InputContainer>
+            <form onSubmit={handleCallCommunicationCreation}>
+              <Input
+                name="name"
+                label="Nome do autor"
+                value={author}
+                onChange={e => setAuthor(e.target.value)}
+              />
 
-          <Input
-            name="subject"
-            label="Assunto"
-            value={subject}
-            onChange={e => setSubject(e.target.value)}
-          />
-          {/* <Input name="teste" label="Destino" /> */}
-          <button type="submit"> Criar </button>
-        </form>
-      </InputContainer>
+              <Input
+                name="subject"
+                label="Assunto"
+                value={subject}
+                onChange={e => setSubject(e.target.value)}
+              />
+              {/* <Input name="teste" label="Destino" /> */}
+              <button type="submit"> Criar </button>
+            </form>
+          </InputContainer>
 
-      {communications?.map((communication: Communication) => {
-        return (
-          <CommunicationItem
-            key={communication.ic_number}
-            communication={communication}
-          />
-        );
-      })}
+          {communications?.map((communication: Communication) => {
+            return (
+              <CommunicationItem
+                key={communication.ic_number}
+                communication={communication}
+              />
+            );
+          })
+          }
 
-      <div>
-        <ButtonPagination type="button" onClick={loadPreviousPage}>
-          Anterior
-        </ButtonPagination>
-        <ButtonPagination type="button" onClick={loadNextPage}>
-          Próximo
-        </ButtonPagination>
-      </div>
+          <div>
+            <ButtonPagination type="button" onClick={loadPreviousPage}>
+              Anterior
+            </ButtonPagination>
+            <ButtonPagination type="button" onClick={loadNextPage}>
+              Próximo
+            </ButtonPagination>
+          </div>
         </>
         : (
           <DialogLoginContainer>
@@ -185,10 +185,10 @@ const InternalCommunications: React.FC = () => {
                 Realizar Login
               </button>
             </div>
-
           </DialogLoginContainer>
         )
-    }
+      }
+      <Footer />
     </Container>
   );
 }
