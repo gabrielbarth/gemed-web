@@ -122,7 +122,7 @@ const ExternalCommunications: React.FC = () => {
     <Container>
       {displayDialog
         ? <ConfirmDialog
-            isInternal={true}
+            isInternal={false}
             onConfirm={handleConfirmCreation}
             onCancel={handleCancelCreation}
             number={dialogNumber}
