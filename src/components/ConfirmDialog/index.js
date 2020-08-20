@@ -1,11 +1,11 @@
-import React, { useState } from 'react';
+import React from 'react';
 
 import { DialogContainer } from './styles';
 
 function ConfirmDialog({onConfirm, onCancel, number, isInternal}) {
 
   const internalCommunicationTitle = 'Tem certeza que deseja criar esta Comunicação Interna?';
-  const externalCommunicationTitle = 'Tem certeza que deseja criar esta Comunicação Interna?';
+  const externalCommunicationTitle = 'Tem certeza que deseja criar este Ofício?';
   const yourNumberText = 'Seu número é:';
 
   return(
