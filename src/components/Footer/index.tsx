@@ -14,7 +14,7 @@ const Footer: React.FC = () => {
           Gabriel.
         </a>
       </p> */}
-      <p>Se sair do Ar é culpa do Carlos Ávalo</p>
+      {/* <p>Se sair do Ar é culpa do Carlos Ávalo</p> */}
     </Container>
   );
 };
