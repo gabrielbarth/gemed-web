@@ -13,7 +13,7 @@ const PageHeader: React.FC<PageHeaderProps> = ({ title, description, navigateTo 
   return (
     <Container>
       <PageTitleContainer>
-        <strong>{title}</strong>
+        <h1>{title}</h1>
         <p>{description}</p>
       </PageTitleContainer>
       <LinkContainer>

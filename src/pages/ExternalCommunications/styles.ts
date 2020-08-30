@@ -4,7 +4,7 @@ import { lighten, darken } from 'polished';
 import colors from '~/styles/colors';
 
 export const Container = styled.div`
-  max-width: 100vh;
+  max-width: 60vw;
   margin: 0 auto;
 
   > div {

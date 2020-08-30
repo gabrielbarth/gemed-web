@@ -14,13 +14,28 @@ export const Container = styled.div`
   margin: 15px 0;
   padding: 0 20px;
 
+  @media (max-width: 1049px) {
+    height: 100%;
+    /* width: 100%; */
+  }
+
   > div {
-    /* @media (min-width: 1100px) { */
-    max-width: 1100px;
-    display: flex;
-    flex-wrap: wrap;
-    width: 100%;
-    /* } */
+    @media (min-width: 1180px) {
+      max-width: 1100px;
+      display: flex;
+      flex-wrap: wrap;
+      width: 100%;
+    }
+    @media (max-width: 1179px) and (min-width: 1050px ) {
+      max-width: 1100px;
+      display: flex;
+      flex-wrap: wrap;
+      width: 100%;
+    }
+    @media (max-width: 1049px) {
+      width: 100%;
+    }
+
   }
 
   span {
@@ -52,14 +67,26 @@ export const DateContainer = styled.div`
 export const NumberContainer = styled.div`
   width: 8%;
   text-align: left;
+
+  @media  (max-width: 1179px) and (min-width: 1050px ) {
+    text-align: center;
+  }
 `;
 
 export const AuthorContainer = styled.div`
-  width: 30%;
+  width: 20%;
   text-align: left;
+
+  @media (max-width: 1049px) {
+      width: 100%;
+  }
 `;
 
 export const SubjectContainer = styled.div`
-  width: 45%;
+  width: 55%;
   text-align: left;
+
+  @media (max-width: 1049px) {
+      width: 100%;
+  }
 `;

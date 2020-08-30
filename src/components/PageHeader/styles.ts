@@ -24,7 +24,8 @@ export const PageTitleContainer = styled.div`
   width: 80%;
   color: ${colors.background};
 
-  strong {
+  h1 {
+    font-weight: normal;
     font-size: 36px;
   }
 `;
